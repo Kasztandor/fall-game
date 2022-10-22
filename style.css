@@ -1,3 +1,7 @@
+:root{
+    --hei: 0%;
+    --tracksCount: 4;
+}
 body{
     height: 100vh;
     background: linear-gradient(purple, blue);
@@ -38,12 +42,33 @@ body{
     background-size: 100% 100%;
     cursor: pointer;
 }
+#settings{
+    margin: 20px 0;
+}
+#advanced{
+    max-height: var(--hei);
+    transition: 1s;
+    overflow: hidden;
+}
+#basic{
+    max-height: calc(100% - var(--hei));
+    transition: 1s;
+    overflow: hidden;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+label{
+    cursor: pointer;
+    user-select: none;
+}
 #game{
     display: flex;
 }
-#d1, #d2, #d3, #d4{
+.track{
     position: relative;
-    width: 25vw;
+    width: calc(100% / var(--tracksCount));
     height: 100vh;
 }
 #line{
